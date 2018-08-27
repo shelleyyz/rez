@@ -20,10 +20,13 @@
   <%= @user.password %>
 </p>
 
+
+<% if @user.image.present? %>
 <p>
   <strong>Image:</strong>
   <%= @user.image %>
 </p>
+<% end %>
 
 <p>
   <strong>Bio:</strong>
