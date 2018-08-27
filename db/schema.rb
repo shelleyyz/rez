@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2018_08_27_042814) do
     t.datetime "updated_at", null: false
     t.integer "category_id"
     t.integer "user_id"
-    t.boolean "published"
+    t.boolean "published", default: false
   end
 
   create_table "users", force: :cascade do |t|

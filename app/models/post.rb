@@ -9,13 +9,17 @@
 #  updated_at  :datetime         not null
 #  category_id :integer
 #  user_id     :integer
+#  published   :boolean          default(FALSE)
 #
 
 class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
+  belongs_to :category
   belongs_to :user
   default_scope { where(published: true) }
 
   #dependent destroy means the comments related to the post will be deleted if the entire post is deleted.
+
+  validates :title, :content, :category_id, presence: true
 
 end

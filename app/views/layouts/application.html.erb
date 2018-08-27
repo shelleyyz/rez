@@ -12,16 +12,19 @@
   <body>
 
     <nav>
-      <ul>
+
         <% if @user.present? %>
-          <li>
+
             <%= link_to "Profile", @user %>
-          </li>
-          <li>
+
+            <%= link_to "Create Post", new_post_path %>
+
+            <%= link_to "Public Posts", posts_path %>
+
             <%= link_to "Sign Out #{ @user.first_name }", login_path, :method => 'delete'%>
-          </li>
+
         <% end %>
-      </ul>
+
     </nav>
 
     <%= yield %>
