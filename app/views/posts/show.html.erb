@@ -17,12 +17,14 @@
 
 <p>
   <strong>Comments:</strong>
+  <ol>
   <% @post.comments.each do |comment| %>
-<ol>
+
   <li><%= comment.body %></li>
-</ol>
+
 
   <% end %>
+  </ol>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

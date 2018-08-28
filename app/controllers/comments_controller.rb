@@ -3,13 +3,13 @@ class CommentsController < ApplicationController
 #ability to create and delete comments associated with a post.
 
   def create
-      @post = Post.find(params[:post_id])
-      @comment = @post.comment.create(params[:comment].permit(:body, :user_id, :post_id))
-      redirect_to post_path(@post)
+      @post = Post.find(params[:comment][:post_id])
+      @comment = @post.comments.create(params[:comment].permit(:body, :user_id, :post_id))
+      @comment[:user_id] = @current_user.id
 
       respond_to do |format|
         if @comment.save
-          format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+          format.html { redirect_to @post, notice: 'Comment was successfully created.' }
           format.json { render :show, status: :created, location: @comment }
         else
           format.html { render :new }

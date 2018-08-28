@@ -24,7 +24,7 @@
 <% if @user.image.present? %>
 <p>
   <strong>Image:</strong>
-  <%= @user.image %>
+  <%= cl_image_tag @user.image, :alt => @user.first_name %>
 </p>
 <% end %>
 

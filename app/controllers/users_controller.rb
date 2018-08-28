@@ -51,7 +51,9 @@ class UsersController < ApplicationController
         params["user"]["image"]
         cloudinary = Cloudinary::Uploader.upload( params[ "user" ][ "image" ] )
         @user.image = cloudinary["url"]
-  
+
+        @user.save
+
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
