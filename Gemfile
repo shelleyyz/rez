@@ -38,8 +38,6 @@ gem 'bcrypt'
 
 gem 'cloudinary'
 
-gem 'omniauth-google-oauth2', '~> 0.2.1'
-
 gem 'jquery-rails'
 
 gem 'bootsnap', '>= 1.1.0', require: false
