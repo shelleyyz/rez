@@ -4,8 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    user = User.find_by_id(params[:user_id])
-
+    @unpublished_posts = Post.where published: false
     if params[:category].blank?
       @posts = Post.all.order("created_at DESC")
     else

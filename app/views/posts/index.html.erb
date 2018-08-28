@@ -30,23 +30,31 @@
         <td><%= post.category.name %></td>
         <td><%= post.published %></td>
 
-        <% end %>
-
-        <% if post.user.present? && post.published == false %>
-
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.user.first_name %></td>
-        <td><%= post.comments.count %></td>
-        <td><%= post.category.name %></td>
-        <td><%= post.published %></td>
-
-        <% end %>
-
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
+        <% end %>
+        <% end %>
+
+      <% @unpublished_posts.each do |p| %>
+        <% if @current_user.id == p.user_id %>
+      <tr>
+        <td><%= p.title %></td>
+        <td><%= p.content %></td>
+        <td><%= p.user.first_name %></td>
+        <td><%= p.comments.count %></td>
+        <td><%= p.category.name %></td>
+        <td><%= p.published %></td>
+
+        <td><%= link_to 'Show', p %></td>
+        <td><%= link_to 'Edit', edit_post_path(p) %></td>
+        <td><%= link_to 'Delete', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+        <% end %>
+
     <% end %>
   </tbody>
 </table>
