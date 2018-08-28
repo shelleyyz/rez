@@ -16,7 +16,6 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   belongs_to :category
   belongs_to :user
-  default_scope { where(published: true) }
 
   #dependent destroy means the comments related to the post will be deleted if the entire post is deleted.
 

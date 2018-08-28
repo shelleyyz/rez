@@ -12,7 +12,17 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @post.category.name%>
+  <%= @post.category.name %>
+</p>
+
+<p>
+  <strong>Public:</strong>
+  <%= @post.published %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= link_to @post.user.first_name, user_path(@post.user) %> <%= @post.user.last_name %>
 </p>
 
 <p>
