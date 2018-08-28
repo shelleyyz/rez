@@ -1,6 +1,6 @@
 class SessionController < ApplicationController
   def new
-    redirect_to user_path(user) if @user.present?
+    redirect_to posts_path if @current_user.present?
   end
 
   def create
