@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :comments
   resources :posts
+  resources :categories
 
   get '/login' => 'session#new' #login form
   post '/login' => 'session#create' #perform a login

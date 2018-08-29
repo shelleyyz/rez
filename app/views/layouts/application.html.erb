@@ -13,17 +13,23 @@
 
     <nav>
 
-        <% if @current_user.present? %>
+      <% if @current_user.present? %>
 
-            <%= link_to "Profile", @current_user %>
+        <%= link_to "Profile", @current_user %>
 
-            <%= link_to "Create Post", new_post_path %>
+        <%= link_to "Create Post", new_post_path %>
 
-            <%= link_to "Public Posts", posts_path %>
+        <%= link_to "Public Posts", posts_path %>
 
-            <%= link_to "Sign Out #{ @current_user.first_name }", login_path, :method => 'delete' %>
+        <% if @current_user.present? && @current_user.admin? %>
+
+          <%= link_to "Categories", categories_path %>
 
         <% end %>
+
+        <%= link_to "Sign Out #{ @current_user.first_name }", login_path, :method => 'delete' %>
+
+      <% end %>
 
     </nav>
 
