@@ -15,6 +15,8 @@
 
       <% if @current_user.present? %>
 
+        <%= link_to "Chatbot", pages_home_path %>
+
         <%= link_to "Profile", @current_user %>
 
         <%= link_to "Create Post", new_post_path %>
