@@ -1,7 +1,12 @@
 <h1>Chatbot</h1>
 
+<% @current_user.conversations.each do |c| %>
+  <p>You: <%= c.request %></p>
+  <p>Them: <%= c.response %></p>
+<% end %>
+
 <%= form_tag '/chat' do %>
-<%= text_area_tag :chatContent %>
+<%= text_area_tag :chatContent, nil, :autofocus => true %>
 <%= submit_tag "Ask Bot!" %>
 
 <% end %>

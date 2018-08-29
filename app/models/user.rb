@@ -25,4 +25,5 @@ class User < ApplicationRecord
   #associations
   has_many :comments
   has_many :posts
+  has_many :conversations
 end
