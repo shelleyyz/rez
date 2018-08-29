@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+  
   root :to => 'session#new'
   resources :users
   resources :comments

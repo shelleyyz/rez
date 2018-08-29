@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :is_admin?, :set_category, only: [:index, :show, :edit, :update, :destroy]
 
   # GET /categories
   # GET /categories.json
@@ -71,4 +71,8 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:name)
     end
+
+    def is_admin?
+     redirect_to posts_path unless @current_user.admin?
+   end
 end
