@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-  before_action :is_admin?, :set_category, only: [:index, :show, :edit, :update, :destroy]
+  before_action :is_admin?, only: [:index, :show, :edit, :update, :destroy]
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
   # GET /categories.json
@@ -64,6 +65,7 @@ class CategoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
+      # raise
       @category = Category.find(params[:id])
     end
 
