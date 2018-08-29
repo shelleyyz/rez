@@ -8,5 +8,3 @@ $dialogflow = ApiAiRuby::Client.new(
 )
 
 p $dialogflow.text_request 'hello!'
-#
-# def
