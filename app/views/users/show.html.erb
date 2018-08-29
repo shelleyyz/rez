@@ -15,12 +15,6 @@
   <%= @user.last_name %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-
 <% if @user.image.present? %>
 <p>
   <strong>Image:</strong>
@@ -28,15 +22,22 @@
 </p>
 <% end %>
 
+<% if @user.bio.present? %>
+
 <p>
   <strong>Bio:</strong>
   <%= @user.bio %>
 </p>
 
+<% end %>
+
+<% if @current_user.admin? %>
 <p>
   <strong>Admin:</strong>
   <%= @user.admin %>
 </p>
+
+<% end %>
 
 <% if @current_user.admin? %>
 
