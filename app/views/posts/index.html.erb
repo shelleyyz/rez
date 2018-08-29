@@ -27,7 +27,13 @@
         <td><%= post.content %></td>
         <td><%= post.user.first_name %></td>
         <td><%= post.comments.count %></td>
+
+        <% if post.category.present? %>
+
         <td><%= post.category.name %></td>
+
+        <% end %>
+
         <td><%= post.published %></td>
 
         <td><%= link_to 'Show', post %></td>
@@ -45,7 +51,13 @@
         <td><%= p.content %></td>
         <td><%= p.user.first_name %></td>
         <td><%= p.comments.count %></td>
+
+        <% if post.category.present? %>
+
         <td><%= p.category.name %></td>
+
+        <% end %>
+
         <td><%= p.published %></td>
 
         <td><%= link_to 'Show', p %></td>
