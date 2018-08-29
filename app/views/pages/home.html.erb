@@ -1,12 +1,14 @@
-<h1>Chatbot</h1>
+<h1>Meet Rez</h1>
+
+<p>Sometimes we're knocked down and unable to move on and get on with our lives. Rez is here to 'resurrect' you and help you get unstuck.</p>
 
 <% @current_user.conversations.each do |c| %>
-  <p>You: <%= c.request %></p>
-  <p>Them: <%= c.response %></p>
+  <p>You: <strong><%= c.request %></strong></p>
+  <p>Rez: <%= c.response %></p>
 <% end %>
 
 <%= form_tag '/chat' do %>
 <%= text_area_tag :chatContent, nil, :autofocus => true %>
-<%= submit_tag "Ask Bot!" %>
+<%= submit_tag "Chat with Rez" %>
 
 <% end %>
