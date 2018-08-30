@@ -40,10 +40,10 @@
   <% else %>
     <td><%= "No" %></td>
   <% end %>
-  
+
 </p>
 
 <% end %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_user_path(@user), :class => "chatbot-btn" %> 
+<%= link_to 'Back', posts_path, :class => "chatbot-btn" %>

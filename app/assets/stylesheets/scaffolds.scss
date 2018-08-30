@@ -2,13 +2,18 @@
 
 body {
   background-image: url("rezbot-wallpaper.png");
+  background-size: cover;
   background-repeat: no-repeat;
+  background-color: #101036;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: white;
+  text-align: center;
 }
+
+// background position fixed
 
 nav {
 	padding: 10px 30px;
@@ -124,6 +129,7 @@ label {
   display: inline-block;
 	color: #666;
 	background-color: #eee;
+  text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 12px;
@@ -138,4 +144,4 @@ label {
 .chatbot-btn:hover {
 		background-color: #e3e3e3;
 		border-color: rgba(0,0,0,0.5);
-	}
+}
