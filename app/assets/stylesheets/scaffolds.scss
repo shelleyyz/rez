@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 body {
   background-image: url("rezbot-wallpaper.png");
@@ -144,4 +145,19 @@ label {
 .chatbot-btn:hover {
 		background-color: #e3e3e3;
 		border-color: rgba(0,0,0,0.5);
+}
+
+//login form
+
+.sign-in-form {
+  font-family: 'Indie Flower', cursive;
+
+  h1 {
+    font-size: 4em;
+    margin-bottom: 4em;
+  }
+}
+
+.input-label {
+
 }
