@@ -16,6 +16,10 @@ body {
 
 // background position fixed
 
+.space {
+  padding: 1.5em;
+}
+
 nav {
 	padding: 10px 30px;
 	height: 70px;
@@ -69,11 +73,7 @@ a {
 }
 
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
+
 
 th {
   padding-bottom: 5px;
@@ -153,7 +153,27 @@ label {
   font-family: 'Indie Flower', cursive;
 
   h1 {
-    font-size: 4em;
-    margin-bottom: 4em;
+    font-size: 5em;
+    margin-bottom: 2em;
   }
+
+  h2 {
+    color: rgb(244, 235, 122);
+  }
+
+}
+
+.form-fields {
+  padding: .5em;
+}
+
+#sign-up-text {
+  color: rgb(244, 235, 122);
+  font-size: 1em;
+}
+
+.chat-text {
+  color: rgb(244, 235, 122);
+  font-size: 2em;
+  font-family: 'Indie Flower', cursive;
 }

@@ -3,8 +3,8 @@
 <p>Sometimes we're knocked down and unable to move on and get on with our lives. Rez is here to 'resurrect' you and help you get unstuck.</p>
 
 <% @current_user.conversations.each do |c| %>
-  <p>You: <strong><%= c.request %></strong></p>
-  <p>Rez: <%== convert_url( c.response ) %></p>
+  <p class="chat-text">You: <strong><%= c.request %></strong></p>
+  <p class="chat-text">Rez: <%== convert_url( c.response ) %></p>
 <% end %>
 
 <%= form_tag '/chat' do %>

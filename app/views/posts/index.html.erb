@@ -4,7 +4,10 @@
 
 <%= render 'posts/nav' %>
 
-<table>
+<div class="space">
+</div>
+
+<table class="posts-index">
   <thead>
     <tr>
       <th>Title</th>
@@ -39,9 +42,9 @@
           <td><%= "No" %></td>
         <% end %>
 
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', post, :class => "chatbot-btn" %></td>
+        <td><%= link_to 'Edit', edit_post_path(post), :class => "chatbot-btn" %></td>
+        <td><%= link_to 'Delete', post, :class => "chatbot-btn", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 
         <% end %>
@@ -63,9 +66,9 @@
 
         <td><%= p.published %></td>
 
-        <td><%= link_to 'Show', p %></td>
-        <td><%= link_to 'Edit', edit_post_path(p) %></td>
-        <td><%= link_to 'Delete', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show ', p, :class => "chatbot-btn" %></td>
+        <td><%= link_to 'Edit', edit_post_path(p), :class => "chatbot-btn" %></td>
+        <td><%= link_to 'Delete', p, :class => "chatbot-btn", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 
         <% end %>
