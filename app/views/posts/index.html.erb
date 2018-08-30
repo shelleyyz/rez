@@ -33,8 +33,11 @@
         <td><%= post.category.name %></td>
 
         <% end %>
-
-        <td><%= post.published %></td>
+        <% if post.published? %>
+          <td><%= "Yes" %></td>
+        <% else %>
+          <td><%= "No" %></td>
+        <% end %>
 
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>

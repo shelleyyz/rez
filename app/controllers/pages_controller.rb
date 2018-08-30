@@ -36,14 +36,5 @@ class PagesController < ApplicationController
     #have to remove turbolinks so that it doesn't refresh the page everytime a post request starts
   end
 
-  def convert_url
-    regex_url = /https?:\/\/[\S]+/
-    match = regex_url.match(@response)
-    if @response.match(regex_url)
-      @converted_response = @response.sub!(regex_url, '<a href="{$url[0]}">{$url[0]}</a>', @response)
-    else
-      @converted_response = @response
-    end
-#convert the plain text url received from response and convert it into html hyperlink
-    end
+
 end

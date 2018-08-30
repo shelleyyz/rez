@@ -1,8 +1,7 @@
 <%= form_with(model: comment, local: true) do |form| %>
 
   <div class="field">
-    <%= form.label :post_id %>
-    <%= form.collection_select :post_id, Post.order(:id), :id, :title %>
+      <p><strong>Post</strong> <br> <%= @post.title %></p>
   </div>
 
   <div class="field">
