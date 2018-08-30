@@ -9,6 +9,8 @@
     <%= form.text_area :body %>
   </div>
 
+  <input type="hidden" name="comment[post_id]" value="<%= params[:post_id] %>">
+
   <div class="actions">
     <%= form.submit %>
   </div>
