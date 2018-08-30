@@ -17,7 +17,11 @@
 
 <p>
   <strong>Public:</strong>
-  <%= @post.published %>
+  <% if @post.published? %>
+    <td><%= "Yes" %></td>
+  <% else %>
+    <td><%= "No" %></td>
+  <% end %>
 </p>
 
 <p>
