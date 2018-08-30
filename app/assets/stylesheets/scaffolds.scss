@@ -1,10 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
-  background-color: #fff;
-  color: #333;
+  background-image: url("rezbot-wallpaper.png");
+  background-repeat: no-repeat;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: white;
+}
+
+nav {
+	padding: 10px 30px;
+	height: 70px;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+nav a {
+  margin: 20px 15px;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 1em;
+	text-decoration: none;
+  display: inline-block;
+}
+
+nav a:hover {
+  margin-bottom: 17px;
+	border-bottom: 3px solid white;
+  /*CCS3 element for hover effect*/
+	-webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -ms-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
 }
 
 p, ol, ul, td {
@@ -17,19 +62,6 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
 }
 
 th {
