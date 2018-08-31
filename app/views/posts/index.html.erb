@@ -11,7 +11,6 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Content</th>
       <th>Author</th>
       <th>Comments</th>
       <th>Category</th>
@@ -27,7 +26,6 @@
         <% if post.published? %>
 
         <td><%= post.title %></td>
-        <td><%= post.content %></td>
         <td><%= post.user.first_name %></td>
         <td><%= post.comments.count %></td>
 
@@ -54,7 +52,6 @@
         <% if @current_user.id == p.user_id %>
       <tr>
         <td><%= p.title %></td>
-        <td><%= p.content %></td>
         <td><%= p.user.first_name %></td>
         <td><%= p.comments.count %></td>
 

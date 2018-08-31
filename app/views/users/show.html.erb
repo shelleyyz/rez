@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div class="user-show">
+
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
@@ -45,5 +47,7 @@
 
 <% end %>
 
-<%= link_to 'Edit', edit_user_path(@user), :class => "chatbot-btn" %> 
+<%= link_to 'Edit', edit_user_path(@user), :class => "chatbot-btn" %>
 <%= link_to 'Back', posts_path, :class => "chatbot-btn" %>
+
+</div>
