@@ -9,7 +9,7 @@ body {
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 30px;
   color: white;
   text-align: center;
 }
@@ -174,4 +174,8 @@ label {
 .post-content-box {
   background-color: rgba(0, 0, 0, 0.2);
   text-align: left;
+}
+
+.conversation-box {
+  background-color: rgba(28, 12, 82, 0.8);
 }

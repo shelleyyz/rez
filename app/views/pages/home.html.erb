@@ -2,10 +2,13 @@
 
 <p>Sometimes we're knocked down and unable to move on and get on with our lives. Rez is here to 'resurrect' you and help you get unstuck.</p>
 
+<div class="conversation-box">
 <% @current_user.conversations.each do |c| %>
   <p class="chat-text">You: <strong><%= c.request %></strong></p>
   <p class="chat-text">Rez: <%== convert_url( c.response ) %></p>
 <% end %>
+
+</div>
 
 <%= form_tag '/chat' do %>
 <%= text_field_tag :chatContent, nil, :autofocus => true %>
