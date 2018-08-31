@@ -18,7 +18,7 @@ A blogging application that features a chatbot that will direct you to relevant 
 * Admin functionality
 
 ## Objectives
-* The app should have at least 3 models. Currently Category, Conversation, Mailbox, Relationship and User.
+* The app should have at least 3 models. Currently Category, Comment, Conversation, Post and User
 * Use partials to DRY (Don’t Repeat Yourself) up your views.
 * Handles invalid data. Forms in your application should validate data and handle incorrect inputs. Validate sign up information, verify valid email addresses and secure passwords.
 * Use Gems Use a GEM that talks to an API to add functionality to your app.
@@ -26,19 +26,14 @@ A blogging application that features a chatbot that will direct you to relevant 
 * Deploy your code to Heroku.
 
 ## Technologies
-* File upload. The project uses Cloudinary and the attachinary gem for single and multiple image uploads.
-* The project uses the search functionality of ruby gem Geocoder that takes an address from user input and searches for its latitude and longitude coordinates. This connects to the Google Maps API and will display when a user updates their user profile or signs up to the site
-* Zodiac sign gem to determine a user's star sign based on their date of birth
-* Slick for carousel display of images
-* Open Trivia Database (API)
-* jQuery
-* Javascript
-* AJAX
+* File upload. The project uses Cloudinary for single and multiple image uploads.
+* Dialogflow previously API.AI - natural language processing service. It is a development suite for creating conversational interfaces for websites, mobile applications and popular messaging platforms.
+* RUBY SDK for Dialogflow
 * Ruby on Rails
 * HTML & CSS
 
 ## To Do:
-- [ ] Date location generator
-- [ ] Advanced styling
-- [ ] React
-- [ ] Web sprockets for live chat
+- [ ] Complete styling
+- [ ] Animations and add Javascript
+- [ ] React or Vue.js
+- [ ] Further conversational design for Rez
