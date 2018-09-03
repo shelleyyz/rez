@@ -11,7 +11,7 @@
 </div>
 
 <%= form_tag '/chat' do %>
-<%= text_field_tag :chatContent, nil, :autofocus => true %>
+<%= text_field_tag :chatContent, nil, :autofocus => true, :class => 'rez-chat-input' %>
 <%= submit_tag "Chat with Rez", :class => 'chatbot-btn' %>
 
 <% end %>

@@ -149,26 +149,64 @@ label {
 
 .sign-in-form {
   font-family: 'Indie Flower', cursive;
-
+  color: black;
   h1 {
-    font-size: 6em;
+    color: rgb(227, 233, 111);
+    font-size: 7em;
     margin-bottom: 2em;
   }
 }
 
-.form-fields {
-  padding: .5em;
+.sign-in-box {
+  font-size: 25px;
+  position: relative;
+  z-index: 1;
+  background: rgba(195, 186, 230, 0.6);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-#sign-up-text {
-  color: rgb(244, 235, 122);
-  font-size: 1em;
+#sign-up-text a {
+  color: #101036;
+}
+
+.input-fields {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.rez-chat-input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 14%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 .chat-text {
-  color: rgb(244, 235, 122);
+  color: black;
   font-size: 2em;
   font-family: 'Indie Flower', cursive;
+  text-align: left;
+  line-height: 1.2em;
+
+  a {
+    color: black;
+  }
+
+
 }
 
 .post-content-box {
@@ -177,5 +215,12 @@ label {
 }
 
 .conversation-box {
-  background-color: rgba(28, 12, 82, 0.8);
+  position: relative;
+  z-index: 1;
+  background: rgba(195, 186, 230, 0.8);
+  max-width: 600px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
