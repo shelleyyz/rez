@@ -1,7 +1,5 @@
 # README
 
-## PROJECT #1 TODO: Meet You.
-
 [Link to live site](https://rez-bot.herokuapp.com/)
 Login details - shelley@ga.co password: chicken
 
